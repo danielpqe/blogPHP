@@ -1,0 +1,18 @@
+{% extends "layout.twig" %}
+{% block content %}
+{% for blogpost in blogposts %}
+<div class="blog-post">
+    <h2>{{ blogpost.title }}</h2>
+    <p> Enero </p>
+    {% if blogpost.img_url %}
+    <div class="blog-post-image">
+        <img src="{{ blogpost.img_url }}" alt="">
+    </div>
+    {% endif %}
+    <div class="blog-post-content">
+        <p>{{ blogpost.content }}</p>
+    </div>
+
+</div>
+{% endfor %}
+{% endblock %}
